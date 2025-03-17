@@ -1,35 +1,44 @@
+# Avanade decola tech 2025
+
+Java RESTful API criada para a AVANADE
+
+## Diagrama de Classes - Banco de Usuário
+
+
+```mermaid
 classDiagram
-    class User {
-        - string name
-        - Account account
-        - Feature[] features
-        - Card card
-        - News[] news
+    class Usuario {
+        - string nome
+        - Conta conta
+        - Funcionalidade[] funcionalidades
+        - Cartao cartao
+        - Noticia[] noticias
     }
 
-    class Account {
-        - string number
-        - string agency
-        - float balance
-        - float limit
+    class Conta {
+        - string numero
+        - string agencia
+        - float saldo
+        - float limite
     }
 
-    class Feature {
-        - string icon
-        - string description
+    class Funcionalidade {
+        - string icone
+        - string descricao
     }
 
-    class Card {
-        - string number
-        - float limit
+    class Cartao {
+        - string numero
+        - float limite
     }
 
-    class News {
-        - string icon
-        - string description
+    class Noticia {
+        - string icone
+        - string descricao
     }
 
-    User --> Account
-    User --> Feature : has
-    User --> Card
-    User --> News : has
+    Usuario --> Conta
+    Usuario --> Funcionalidade : possui
+    Usuario --> Cartao
+    Usuario --> Noticia : possui
+
